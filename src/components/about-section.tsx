@@ -20,9 +20,28 @@ export function AboutSection() {
         {/* Section Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
           <div>
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#111111] border border-[#D5FF40]/30 text-xs font-mono text-[#D5FF40] mb-3">
-              <Sparkles className="w-3.5 h-3.5" />
-              <span>VERIFIED BIOGRAPHICAL RECORD</span>
+            <div className="flex flex-wrap items-center gap-2 mb-3">
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#111111] border border-[#D5FF40]/30 text-xs font-mono text-[#D5FF40]">
+                <Sparkles className="w-3.5 h-3.5" />
+                <span>VERIFIED BIOGRAPHICAL RECORD</span>
+              </div>
+              <a
+                href="https://www.dizitalgrow.in/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[10px] font-mono text-white/70 hover:text-[#D5FF40] uppercase tracking-widest px-2.5 py-0.5 rounded-full bg-white/5 hover:bg-white/10 border border-white/10 hover:border-[#D5FF40]/40 transition-colors"
+                title="Dizital Grow Official Website"
+              >
+                DIZITAL GROW RETROSPECTIVE &bull; dizitalgrow.in ↗
+              </a>
+              <a
+                href="https://www.instagram.com/dizitalgrow/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[10px] font-mono text-[#D5FF40] hover:underline"
+              >
+                @dizitalgrow
+              </a>
             </div>
             <h2 className="font-space font-extrabold text-4xl sm:text-5xl md:text-6xl text-white tracking-tight uppercase">
               Biography &amp; Life Journey
@@ -201,6 +220,33 @@ export function AboutSection() {
               </p>
             </div>
           ))}
+        </div>
+
+        {/* Dizital Grow Archive Note */}
+        <div className="mt-8 flex flex-wrap items-center justify-between gap-4 p-4 rounded-2xl bg-white/[0.02] border border-white/5 text-xs font-mono text-white/50">
+          <div className="flex items-center gap-2">
+            <span className="w-1.5 h-1.5 rounded-full bg-[#D5FF40]" />
+            <span>Biographical data authenticated via public archives &amp; encyclopedic records</span>
+          </div>
+          <div className="flex items-center gap-3">
+            <a
+              href="https://www.dizitalgrow.in/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[#D5FF40] hover:underline font-semibold"
+            >
+              Curated by Dizital Grow (dizitalgrow.in) &rarr;
+            </a>
+            <span className="text-white/20">&bull;</span>
+            <a
+              href="https://www.instagram.com/dizitalgrow/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-white/60 hover:text-[#D5FF40]"
+            >
+              @dizitalgrow
+            </a>
+          </div>
         </div>
       </div>
     </section>

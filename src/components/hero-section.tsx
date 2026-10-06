@@ -2,7 +2,8 @@
 
 import React, { useState, useRef } from "react";
 import Image from "next/image";
-import { ArrowDownRight, Film, Shield, Flame, Globe2, BookOpen } from "lucide-react";
+import { ArrowDownRight, Film, Shield, Flame, Globe2, BookOpen, Sparkles } from "lucide-react";
+import { InstagramIcon } from "@/components/icons";
 
 export function HeroSection() {
   const [rotate, setRotate] = useState({ x: 0, y: 0 });
@@ -26,7 +27,7 @@ export function HeroSection() {
   };
 
   return (
-    <section className="relative min-h-screen w-full flex items-center justify-center pt-28 pb-16 px-4 sm:px-6 lg:px-12 overflow-hidden bg-[#050505]">
+    <section className="relative min-h-screen w-full flex items-center justify-center pt-36 sm:pt-40 pb-16 px-4 sm:px-6 lg:px-12 overflow-hidden bg-[#050505]">
       {/* Background Animated Cyber Grid & Ambient Glow */}
       <div className="absolute inset-0 bg-grid-cyber pointer-events-none opacity-40" />
       <div className="absolute top-1/4 left-1/4 w-96 h-96 rounded-full bg-[#D5FF40]/10 blur-[130px] pointer-events-none animate-pulse-glow" />
@@ -39,15 +40,40 @@ export function HeroSection() {
       <div className="relative z-10 w-full max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
         {/* Left Column: Headline & Wikipedia Bio */}
         <div className="lg:col-span-7 flex flex-col items-start text-left">
-          {/* Eyebrow Badge */}
-          <div className="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-[#111111] border border-[#D5FF40]/30 shadow-[0_0_20px_rgba(213,255,64,0.12)] mb-6">
-            <span className="flex h-2 w-2 relative">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#D5FF40] opacity-75" />
-              <span className="relative inline-flex rounded-full h-2 w-2 bg-[#D5FF40]" />
-            </span>
-            <span className="text-xs font-mono font-medium tracking-wider text-[#D5FF40] uppercase">
-              MAN OF MASSES &bull; FORBES CELEBRITY 100
-            </span>
+          {/* Dizital Grow Brand Tag & Eyebrow Badge */}
+          <div className="flex flex-wrap items-center gap-3 mb-6">
+            <a
+              href="https://www.dizitalgrow.in/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Visit Dizital Grow Website"
+              className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/5 hover:bg-white/10 border border-white/10 hover:border-[#D5FF40] text-xs font-mono text-white/90 hover:text-white transition-all duration-300 shadow-sm hover:shadow-[0_0_15px_rgba(213,255,64,0.3)] group"
+            >
+              <Sparkles className="w-3.5 h-3.5 text-[#D5FF40] group-hover:rotate-12 transition-transform" />
+              <span>A <strong className="text-white font-semibold">DIZITAL GROW</strong> PRODUCTION</span>
+              <span className="text-[#D5FF40] font-semibold tracking-wider">&bull; dizitalgrow.in &rarr;</span>
+            </a>
+
+            <a
+              href="https://www.instagram.com/dizitalgrow/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Visit Dizital Grow on Instagram"
+              className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-[#111111] hover:bg-[#181818] border border-[#D5FF40]/30 hover:border-[#D5FF40] text-xs font-mono text-white/90 hover:text-[#D5FF40] transition-colors"
+            >
+              <InstagramIcon className="w-3.5 h-3.5 text-[#D5FF40]" />
+              <span>@dizitalgrow</span>
+            </a>
+
+            <div className="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-[#111111] border border-[#D5FF40]/30 shadow-[0_0_20px_rgba(213,255,64,0.12)]">
+              <span className="flex h-2 w-2 relative">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#D5FF40] opacity-75" />
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-[#D5FF40]" />
+              </span>
+              <span className="text-xs font-mono font-medium tracking-wider text-[#D5FF40] uppercase">
+                MAN OF MASSES &bull; FORBES CELEBRITY 100
+              </span>
+            </div>
           </div>
 
           {/* Massive Headline */}
@@ -65,7 +91,7 @@ export function HeroSection() {
             including <span className="text-[#D5FF40] font-semibold">RRR</span>, <span className="text-[#D5FF40] font-semibold">Devara</span>, and <span className="text-[#D5FF40] font-semibold">Simhadri</span>.
           </p>
 
-          {/* Interactive Navigation CTAs (No video play icons) */}
+          {/* Interactive Navigation CTAs */}
           <div className="flex flex-wrap items-center gap-4 sm:gap-5 mb-12">
             <a
               id="hero-explore-biography"
@@ -80,10 +106,32 @@ export function HeroSection() {
             <a
               id="hero-view-filmography"
               href="#filmography"
-              className="group inline-flex items-center gap-3 px-8 py-4 rounded-2xl bg-[#111111] hover:bg-[#181818] border border-white/15 hover:border-[#D5FF40]/50 text-white font-space font-bold text-sm sm:text-base tracking-wider uppercase transition-all duration-300 shadow-xl hover:-translate-y-1"
+              className="group inline-flex items-center gap-3 px-7 py-4 rounded-2xl bg-[#111111] hover:bg-[#181818] border border-white/15 hover:border-[#D5FF40]/50 text-white font-space font-bold text-sm sm:text-base tracking-wider uppercase transition-all duration-300 shadow-xl hover:-translate-y-1"
             >
               <Film className="w-5 h-5 text-[#D5FF40]" />
-              <span>Landmark Filmography</span>
+              <span>Filmography</span>
+            </a>
+
+            <a
+              id="hero-agency-website"
+              href="https://www.dizitalgrow.in/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group inline-flex items-center gap-2 px-6 py-4 rounded-2xl bg-[#111111] hover:bg-[#181818] border border-white/15 hover:border-[#D5FF40] text-white font-space font-bold text-sm tracking-wider uppercase transition-all duration-300 shadow-xl hover:-translate-y-1 hover:shadow-[0_0_20px_rgba(213,255,64,0.2)]"
+            >
+              <Globe2 className="w-4 h-4 text-[#D5FF40] group-hover:rotate-12 transition-transform" />
+              <span>dizitalgrow.in</span>
+            </a>
+
+            <a
+              id="hero-instagram-dizitalgrow"
+              href="https://www.instagram.com/dizitalgrow/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group inline-flex items-center gap-2 px-6 py-4 rounded-2xl bg-[#111111] hover:bg-[#181818] border border-[#D5FF40]/40 hover:border-[#D5FF40] text-white font-space font-bold text-sm tracking-wider uppercase transition-all duration-300 shadow-xl hover:-translate-y-1 hover:shadow-[0_0_25px_rgba(213,255,64,0.25)]"
+            >
+              <InstagramIcon className="w-4 h-4 text-[#D5FF40] group-hover:scale-110 transition-transform" />
+              <span>@dizitalgrow</span>
             </a>
           </div>
 

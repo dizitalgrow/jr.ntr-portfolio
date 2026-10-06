@@ -5,6 +5,7 @@ import Image from "next/image";
 import confetti from "canvas-confetti";
 import { INITIAL_FAN_TRIBUTES, FanTribute } from "@/data/ntr-data";
 import { Heart, Sparkles, Flame, Users2, ShieldCheck, MapPin, Quote } from "lucide-react";
+import { InstagramIcon } from "@/components/icons";
 
 export function CommunitySection() {
   const [tributes, setTributes] = useState<FanTribute[]>(INITIAL_FAN_TRIBUTES);
@@ -43,9 +44,28 @@ export function CommunitySection() {
       <div className="max-w-7xl mx-auto relative z-10">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#111111] border border-[#D5FF40]/30 text-xs font-mono text-[#D5FF40] mb-3">
-            <Users2 className="w-3.5 h-3.5" />
-            <span>GLOBAL BROTHERHOOD &amp; ADMIRATION</span>
+          <div className="flex flex-wrap items-center justify-center gap-2 mb-3">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#111111] border border-[#D5FF40]/30 text-xs font-mono text-[#D5FF40]">
+              <Users2 className="w-3.5 h-3.5" />
+              <span>GLOBAL BROTHERHOOD &amp; ADMIRATION</span>
+            </div>
+            <a
+              href="https://www.dizitalgrow.in/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[10px] font-mono text-white/70 hover:text-[#D5FF40] uppercase tracking-widest px-2.5 py-0.5 rounded-full bg-white/5 hover:bg-white/10 border border-white/10 hover:border-[#D5FF40]/40 transition-colors"
+              title="Dizital Grow Official Website"
+            >
+              COMMUNITY HOSTED BY DIZITAL GROW &bull; dizitalgrow.in ↗
+            </a>
+            <a
+              href="https://www.instagram.com/dizitalgrow/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[10px] font-mono text-[#D5FF40] hover:underline"
+            >
+              @dizitalgrow
+            </a>
           </div>
           <h2 className="font-space font-extrabold text-4xl sm:text-5xl md:text-6xl text-white tracking-tight uppercase">
             Global Fan Community Wall
@@ -54,7 +74,7 @@ export function CommunitySection() {
             Voices of adoration echoing across continents — from Shibuya crossing in Tokyo to packed auditoriums across Hyderabad and Los Angeles.
           </p>
 
-          {/* Interactive Cheer Button */}
+          {/* Interactive Cheer Button & Agency Actions */}
           <div className="mt-8 flex flex-col items-center justify-center">
             <button
               id="fan-cheer-btn"
@@ -67,10 +87,33 @@ export function CommunitySection() {
             </button>
             <p className="font-mono text-xs text-white/50 mt-3">
               Total Cheers Recorded:{" "}
-              <span className="text-[#D5FF40] font-bold">
-                {cheerCount.toLocaleString()}
+              <span className="text-[#D5FF40] font-bold" suppressHydrationWarning>
+                {cheerCount.toLocaleString("en-US")}
               </span>
             </p>
+
+            <div className="mt-4 flex flex-wrap items-center justify-center gap-3">
+              <a
+                href="https://www.dizitalgrow.in/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-[#111111] hover:bg-[#181818] border border-white/15 hover:border-[#D5FF40] text-xs font-mono text-white hover:text-[#D5FF40] transition-all duration-300 shadow-md hover:shadow-[0_0_20px_rgba(213,255,64,0.2)]"
+              >
+                <span>Agency Hub &bull; www.dizitalgrow.in</span>
+                <span className="text-[#D5FF40]">&rarr;</span>
+              </a>
+
+              <a
+                href="https://www.instagram.com/dizitalgrow/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-white/5 hover:bg-white/10 border border-[#D5FF40]/40 hover:border-[#D5FF40] text-xs font-mono text-white/90 hover:text-[#D5FF40] transition-all duration-300 shadow-md hover:shadow-[0_0_20px_rgba(213,255,64,0.25)]"
+              >
+                <InstagramIcon className="w-3.5 h-3.5 text-[#D5FF40]" />
+                <span>Connect on Instagram &bull; @dizitalgrow</span>
+                <span className="text-[#D5FF40]">&rarr;</span>
+              </a>
+            </div>
           </div>
         </div>
 

@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import { Menu, X, BookOpen, Film, Award, Globe, Users, Image as ImageIcon, Sparkles } from "lucide-react";
+import { InstagramIcon } from "@/components/icons";
 
 export function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -27,11 +28,54 @@ export function Navbar() {
   return (
     <>
       <header
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 py-3 md:py-4 px-4 sm:px-6 flex justify-center ${
-          scrolled ? "backdrop-blur-md bg-black/60 border-b border-white/5" : "bg-transparent"
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 flex flex-col items-center ${
+          scrolled ? "backdrop-blur-md bg-black/80 border-b border-white/5 shadow-2xl" : "bg-gradient-to-b from-black/80 to-transparent"
         }`}
       >
-        <div className="w-full max-w-7xl flex items-center justify-between">
+        {/* Persistent Dizital Grow Production Ribbon with Website and Instagram Actions */}
+        <div className="w-full bg-[#080808]/90 border-b border-white/5 py-1 px-4 sm:px-6 flex items-center justify-between text-[10px] sm:text-[11px] font-mono tracking-widest uppercase">
+          <a
+            href="https://www.dizitalgrow.in/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-2 text-white/80 hover:text-[#D5FF40] transition-colors group"
+            title="Visit Dizital Grow Official Website"
+          >
+            <span className="w-1.5 h-1.5 rounded-full bg-[#D5FF40] shadow-[0_0_8px_#D5FF40] animate-pulse" />
+            <span>A <strong className="text-white group-hover:text-[#D5FF40] font-bold tracking-wider">DIZITAL GROW</strong> PRODUCTION</span>
+            <span className="text-[#D5FF40] text-[9px] font-mono tracking-normal px-1.5 py-0.2 rounded bg-white/10 border border-[#D5FF40]/30 hidden sm:inline-block">dizitalgrow.in ↗</span>
+          </a>
+
+          <div className="hidden md:flex items-center gap-3 text-white/40 text-[10px]">
+            <span>CINEMATIC RETROSPECTIVE</span>
+            <span>&bull;</span>
+            <span className="text-[#D5FF40]">JR. NTR OFFICIAL ARCHIVE</span>
+          </div>
+
+          <div className="flex items-center gap-3">
+            <a
+              href="https://www.dizitalgrow.in/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hidden sm:inline-flex items-center gap-1 text-[10px] text-white/70 hover:text-[#D5FF40] transition-colors"
+            >
+              <span>DIZITALGROW.IN</span>
+              <span className="text-[#D5FF40]">&bull;</span>
+            </a>
+            <a
+              href="https://www.instagram.com/dizitalgrow/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[10px] text-[#D5FF40] hover:text-white font-semibold tracking-wider flex items-center gap-1.5 transition-colors"
+            >
+              <InstagramIcon className="w-3.5 h-3.5 text-[#D5FF40]" />
+              <span>@DIZITALGROW &rarr;</span>
+            </a>
+          </div>
+        </div>
+
+        {/* Main Nav Bar */}
+        <div className="w-full max-w-7xl py-2.5 md:py-3 px-4 sm:px-6 flex items-center justify-between">
           {/* Brand Monogram */}
           <a
             href="#"
@@ -69,11 +113,29 @@ export function Navbar() {
 
           {/* Right Controls */}
           <div className="flex items-center gap-3">
-            {/* Live Indicator (Desktop) */}
-            <div className="hidden sm:flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#111111] border border-white/10 text-[11px] text-white/60">
-              <span className="w-2 h-2 rounded-full bg-[#D5FF40] shadow-[0_0_8px_#D5FF40] animate-pulse" />
-              <span className="font-mono text-white/80">GLOBAL ICON</span>
-            </div>
+            {/* Dizital Grow Official Website Link */}
+            <a
+              href="https://www.dizitalgrow.in/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Dizital Grow Official Website"
+              className="hidden xl:flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-[#111111] hover:bg-[#181818] border border-white/10 hover:border-[#D5FF40]/50 text-[11px] transition-all duration-300 group"
+            >
+              <Globe className="w-3.5 h-3.5 text-[#D5FF40] group-hover:rotate-12 transition-transform" />
+              <span className="font-mono text-white/90 tracking-wider">DIZITALGROW.IN</span>
+            </a>
+
+            {/* Dizital Grow Agency Instagram Pill */}
+            <a
+              href="https://www.instagram.com/dizitalgrow/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Dizital Grow Instagram"
+              className="hidden sm:flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#111111] hover:bg-[#181818] border border-[#D5FF40]/30 hover:border-[#D5FF40] text-[11px] transition-all duration-300 hover:shadow-[0_0_15px_rgba(213,255,64,0.3)] group"
+            >
+              <InstagramIcon className="w-3.5 h-3.5 text-[#D5FF40] group-hover:scale-110 transition-transform" />
+              <span className="font-mono text-white/90 tracking-wider">@DIZITALGROW</span>
+            </a>
 
             {/* Quick Action Link */}
             <a
@@ -97,7 +159,7 @@ export function Navbar() {
 
       {/* Mobile Drawer */}
       {mobileMenuOpen && (
-        <div className="fixed inset-0 z-40 bg-black/95 backdrop-blur-2xl flex flex-col pt-24 px-6 pb-8 lg:hidden animate-in fade-in duration-300">
+        <div className="fixed inset-0 z-40 bg-black/95 backdrop-blur-2xl flex flex-col pt-28 px-6 pb-8 lg:hidden animate-in fade-in duration-300">
           <div className="flex flex-col gap-3">
             {navLinks.map((link) => {
               const Icon = link.icon;
@@ -117,14 +179,42 @@ export function Navbar() {
 
           <div className="mt-auto pt-6 border-t border-white/10 flex flex-col gap-3">
             <a
+              href="https://www.dizitalgrow.in/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full py-3 rounded-xl bg-white/5 hover:bg-white/10 border border-[#D5FF40]/40 text-white font-space font-semibold text-xs tracking-wider uppercase text-center flex items-center justify-center gap-2 transition-colors"
+            >
+              <Globe className="w-4 h-4 text-[#D5FF40]" />
+              <span>Agency Website: www.dizitalgrow.in</span>
+            </a>
+
+            <a
+              href="https://www.instagram.com/dizitalgrow/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full py-3.5 rounded-xl bg-[#111111] hover:bg-[#181818] border border-[#D5FF40] text-white font-space font-semibold text-xs tracking-wider uppercase text-center flex items-center justify-center gap-2 transition-colors shadow-[0_0_15px_rgba(213,255,64,0.2)]"
+            >
+              <InstagramIcon className="w-4 h-4 text-[#D5FF40]" />
+              <span>Follow @dizitalgrow on Instagram</span>
+            </a>
+
+            <a
               href="#filmography"
               onClick={() => setMobileMenuOpen(false)}
               className="w-full py-3.5 rounded-xl bg-[#D5FF40] text-[#050505] font-space font-bold text-sm tracking-wider uppercase text-center"
             >
               Explore Filmography
             </a>
-            <div className="text-center text-xs text-white/40 font-mono">
-              NANDAMURI TARAKA RAMA RAO JR. RETROSPECTIVE
+            <div className="text-center text-xs text-white/50 font-mono flex flex-wrap items-center justify-center gap-1.5">
+              <span>DESIGNED &amp; ENGINEERED BY</span>
+              <a
+                href="https://www.dizitalgrow.in/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[#D5FF40] hover:underline font-bold"
+              >
+                DIZITAL GROW (dizitalgrow.in)
+              </a>
             </div>
           </div>
         </div>

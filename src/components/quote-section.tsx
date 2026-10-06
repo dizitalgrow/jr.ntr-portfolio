@@ -39,6 +39,30 @@ export function QuoteSection() {
         <p className="font-inter text-xs sm:text-sm text-white/50 tracking-widest uppercase mt-4">
           CARRYING FORWARD A CENTURY OF LEGENDARY CINEMA WITH UNCOMPROMISED HUMILITY
         </p>
+
+        {/* Dizital Grow Digital Architecture Credit with Website & Instagram Links */}
+        <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
+          <a
+            href="https://www.dizitalgrow.in/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-2 px-5 py-2.5 rounded-full bg-[#111111] hover:bg-[#181818] border border-white/10 hover:border-[#D5FF40] text-[11px] font-mono tracking-wider text-white hover:text-[#D5FF40] uppercase transition-all duration-300 shadow-sm hover:shadow-[0_0_20px_rgba(213,255,64,0.25)] group"
+          >
+            <span>Digital Architecture &amp; Curation</span>
+            <span className="text-[#D5FF40]">&bull;</span>
+            <strong className="text-white font-bold">DIZITAL GROW (dizitalgrow.in)</strong>
+            <span className="text-[#D5FF40]">&rarr;</span>
+          </a>
+
+          <a
+            href="https://www.instagram.com/dizitalgrow/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-1.5 px-4 py-2.5 rounded-full bg-white/5 hover:bg-white/10 border border-[#D5FF40]/30 hover:border-[#D5FF40] text-[11px] font-mono text-white/90 hover:text-[#D5FF40] transition-colors"
+          >
+            <span>@dizitalgrow on Instagram &rarr;</span>
+          </a>
+        </div>
       </div>
     </section>
   );

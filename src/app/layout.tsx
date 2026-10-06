@@ -26,7 +26,7 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: "JR. NTR | The Global Icon of Indian Cinema — Official Experience",
   description:
-    "An award-winning cinematic journey through the legacy, historic filmography, global milestones, and international acclaim of Indian superstar Nandamuri Taraka Rama Rao Jr. (Jr. NTR).",
+    "An award-winning cinematic digital retrospective honoring the monumental legacy, historic filmography, global milestones, and international acclaim of Indian superstar Nandamuri Taraka Rama Rao Jr. (Jr. NTR). Designed & Engineered by Dizital Grow.",
   keywords: [
     "Jr NTR",
     "NTR Jr",
@@ -37,11 +37,17 @@ export const metadata: Metadata = {
     "Telugu Cinema Icon",
     "Naatu Naatu Oscar",
     "Man of Masses",
+    "Dizital Grow",
   ],
-  authors: [{ name: "Creative Studio & NTR Fan Community" }],
+  authors: [{ name: "Dizital Grow", url: "https://www.dizitalgrow.in/" }],
+  creator: "Dizital Grow",
+  publisher: "Dizital Grow",
+  generator: "Dizital Grow Digital Studio",
+  metadataBase: new URL("https://www.dizitalgrow.in"),
   openGraph: {
-    title: "JR. NTR | The Global Icon of Indian Cinema",
-    description: "Experience the monumental cinematic journey of Jr. NTR — from Student No.1 to RRR and Devara.",
+    title: "JR. NTR | The Global Icon of Indian Cinema — A Dizital Grow Production",
+    description: "Experience the monumental cinematic journey of Jr. NTR — from Student No.1 to RRR and Devara. Architected by Dizital Grow.",
+    url: "https://www.dizitalgrow.in/",
     type: "website",
   },
 };
