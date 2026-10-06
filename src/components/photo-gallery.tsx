@@ -94,6 +94,7 @@ export function PhotoGallery() {
                   src={item.image}
                   alt="Ambient"
                   fill
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                   className="object-cover"
                 />
               </div>
@@ -111,6 +112,7 @@ export function PhotoGallery() {
                   src={item.image}
                   alt={item.title}
                   fill
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                   className="object-cover object-center group-hover:scale-108 transition-transform duration-700 filter brightness-95 group-hover:brightness-105"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent opacity-80 group-hover:opacity-90 transition-opacity" />
@@ -183,6 +185,7 @@ export function PhotoGallery() {
                 src={filteredItems[lightboxIndex].image}
                 alt={filteredItems[lightboxIndex].title}
                 fill
+                sizes="(max-width: 1280px) 100vw, 1200px"
                 className="object-contain"
               />
             </div>

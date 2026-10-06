@@ -77,6 +77,7 @@ export function AboutSection() {
                   src={activeMilestone.image}
                   alt="Ambient Glow"
                   fill
+                  sizes="(max-width: 1024px) 100vw, 500px"
                   className="object-cover object-center"
                 />
               </div>
@@ -85,6 +86,7 @@ export function AboutSection() {
                 src={activeMilestone.image}
                 alt={activeMilestone.title}
                 fill
+                sizes="(max-width: 1024px) 100vw, 500px"
                 className="object-cover object-center filter contrast-105 brightness-95 group-hover:scale-105 transition-transform duration-700"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent" />

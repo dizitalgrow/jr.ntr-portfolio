@@ -90,6 +90,7 @@ export function FilmographySection() {
                   src={movie.poster}
                   alt="Ambient"
                   fill
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, (max-width: 1280px) 33vw, 25vw"
                   className="object-cover"
                 />
               </div>
@@ -100,6 +101,7 @@ export function FilmographySection() {
                   src={movie.poster}
                   alt={movie.title}
                   fill
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, (max-width: 1280px) 33vw, 25vw"
                   className="object-cover object-center group-hover:scale-108 transition-transform duration-700"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#111111] via-transparent to-black/30" />
@@ -177,6 +179,7 @@ export function FilmographySection() {
                 src={activeModalMovie.backdrop}
                 alt={activeModalMovie.title}
                 fill
+                sizes="(max-width: 768px) 100vw, 800px"
                 className="object-cover object-center filter brightness-75"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[#111111] via-[#111111]/40 to-transparent" />

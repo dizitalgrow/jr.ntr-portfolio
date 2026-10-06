@@ -137,6 +137,7 @@ export function HeroSection() {
                 src="/images/ntr/hero_portrait.jpg"
                 alt="Ambient Glow"
                 fill
+                sizes="(max-width: 1024px) 100vw, 550px"
                 className="object-cover object-top filter blur-3xl opacity-40 scale-110"
               />
             </div>
@@ -148,6 +149,7 @@ export function HeroSection() {
                 alt="Jr. NTR Official High Resolution Portrait"
                 fill
                 priority
+                sizes="(max-width: 1024px) 100vw, 550px"
                 className="object-cover object-top filter contrast-110 brightness-100 group-hover:scale-105 transition-transform duration-700"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-[#050505]/20 to-transparent" />
