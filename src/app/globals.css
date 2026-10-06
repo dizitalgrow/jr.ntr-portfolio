@@ -1,0 +1,230 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-main: #050505;
+    --surface-main: #111111;
+    --surface-elevated: #161616;
+    --surface-card: #181818;
+    --accent: #D5FF40;
+    --accent-glow: rgba(213, 255, 64, 0.35);
+    --accent-muted: rgba(213, 255, 64, 0.12);
+    --text-primary: #FFFFFF;
+    --text-secondary: rgba(255, 255, 255, 0.7);
+    --border-subtle: rgba(255, 255, 255, 0.08);
+    --border-accent: rgba(213, 255, 64, 0.3);
+  }
+
+  html {
+    scroll-behavior: smooth;
+    background-color: var(--bg-main);
+    color: var(--text-primary);
+  }
+
+  body {
+    background-color: #050505;
+    color: #ffffff;
+    font-family: var(--font-inter), -apple-system, BlinkMacSystemFont, sans-serif;
+    overflow-x: hidden;
+    selection-background-color: #D5FF40;
+    selection-color: #050505;
+  }
+
+  ::selection {
+    background: #D5FF40;
+    color: #050505;
+  }
+}
+
+/* Custom Typography Utilities */
+.font-space {
+  font-family: var(--font-space-grotesk), sans-serif;
+}
+
+.font-sora {
+  font-family: var(--font-sora), sans-serif;
+}
+
+.font-inter {
+  font-family: var(--font-inter), sans-serif;
+}
+
+/* Custom Glassmorphism */
+.glass-panel {
+  background: rgba(17, 17, 17, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.glass-panel-accent {
+  background: rgba(17, 17, 17, 0.85);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(213, 255, 64, 0.25);
+  box-shadow: 0 0 25px rgba(213, 255, 64, 0.08);
+}
+
+.glass-pill {
+  background: rgba(20, 20, 20, 0.65);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Glow & Neon Effects */
+.neon-glow {
+  box-shadow: 0 0 20px rgba(213, 255, 64, 0.35), 0 0 40px rgba(213, 255, 64, 0.15);
+}
+
+.neon-glow-lg {
+  box-shadow: 0 0 35px rgba(213, 255, 64, 0.5), 0 0 70px rgba(213, 255, 64, 0.25);
+}
+
+.text-glow {
+  text-shadow: 0 0 20px rgba(213, 255, 64, 0.6);
+}
+
+.text-stroke-title {
+  -webkit-text-stroke: 1.5px rgba(255, 255, 255, 0.25);
+  color: transparent;
+}
+
+.text-stroke-accent {
+  -webkit-text-stroke: 1.5px rgba(213, 255, 64, 0.4);
+  color: transparent;
+}
+
+/* Cyber Matrix Background Grid */
+.bg-grid-cyber {
+  background-image: linear-gradient(to right, rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+                    linear-gradient(to bottom, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+  background-size: 60px 60px;
+}
+
+.bg-dots-cyber {
+  background-image: radial-gradient(rgba(213, 255, 64, 0.18) 1px, transparent 1px);
+  background-size: 32px 32px;
+}
+
+/* Futuristic Scanline Overlay */
+.scanlines {
+  background: linear-gradient(
+    rgba(18, 16, 16, 0) 50%, 
+    rgba(0, 0, 0, 0.25) 50%
+  );
+  background-size: 100% 4px;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #050505;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #222222;
+  border-radius: 4px;
+  border: 2px solid #050505;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #D5FF40;
+}
+
+/* Shimmer Keyframe */
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.animate-shimmer {
+  background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(213,255,64,0.15) 50%, rgba(255,255,255,0) 100%);
+  background-size: 200% 100%;
+  animation: shimmer 3s infinite;
+}
+
+@keyframes pulseGlow {
+  0%, 100% {
+    opacity: 0.4;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.8;
+    transform: scale(1.05);
+  }
+}
+
+.animate-pulse-glow {
+  animation: pulseGlow 4s ease-in-out infinite;
+}
+
+@keyframes floatSlow {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-12px) rotate(1deg);
+  }
+}
+
+.animate-float {
+  animation: floatSlow 6s ease-in-out infinite;
+}
+
+/* Ambient Image Blur & Depth Utilities */
+.img-ambient-container {
+  position: relative;
+  isolation: isolate;
+}
+
+.img-ambient-glow {
+  position: absolute;
+  inset: -10px;
+  filter: blur(28px);
+  opacity: 0.35;
+  z-index: -1;
+  transition: opacity 0.5s ease, filter 0.5s ease;
+  pointer-events: none;
+  border-radius: inherit;
+}
+
+.group:hover .img-ambient-glow {
+  opacity: 0.6;
+  filter: blur(34px);
+}
+
+.img-frosted-luxury {
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+/* Lenis Recommended CSS */
+html.lenis, html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
+}
