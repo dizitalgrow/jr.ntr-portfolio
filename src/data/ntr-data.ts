@@ -91,7 +91,7 @@ export const MILESTONES: Milestone[] = [
       "Made his debut as a lead actor in 'Ninnu Choodalani' (2001). That same year, his coming-of-age collaboration with debutant director S. S. Rajamouli in 'Student No. 1' emerged as a runaway success, running for over 100 days across theaters. He followed it with V. V. Vinayak's action phenomenon 'Aadi' (2002).",
     impact: "Established Jr. NTR as the youngest mass sensation of Telugu cinema, lauded for ferocious dialogue delivery and unmatched dance agility.",
     tag: "Breakthrough Stardom",
-    image: "/images/ntr/highres_war2_sets.jpg",
+    image: "/images/ntr/ntr_interview_aravinda.png",
   },
   {
     id: "simhadri",
